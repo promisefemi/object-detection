@@ -12,10 +12,10 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="w-max p-2 px-4 rounded-lg text-purple bg-purple-light">
-        <p className="font-bold mb-0">
-          29:10 <span className="font-normal text-sm">time left</span>
-        </p>
+      <div className="w-max p-4 px-4 rounded-lg text-purple bg-purple-light">
+        {/* <p className="font-bold mb-0">
+          29: <span className="font-normal text-sm">time left</span>
+        </p> */}
       </div>
     </div>
   );

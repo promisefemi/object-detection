@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import p5 from "p5";
 import ml5 from "ml5";
 
 const ObjectDetection = () => {
   const sketchRef = useRef();
+  const [modelLoading, setModelState] = useState(true);
 
   useEffect(() => {
     let myp5 = new p5(sketch, sketchRef.current);
@@ -44,7 +45,7 @@ const ObjectDetection = () => {
     };
 
     function modelReady() {
-      console.log("Model Loaded!");
+      setModelState(false);
       detect();
     }
 
@@ -63,7 +64,12 @@ const ObjectDetection = () => {
   };
 
   return (
-    <div>
+    <div className="relative">
+      {modelLoading ? (
+        <div className="absolute text-center bg-purple/50 w-full h-full flex justify-center items-center ">
+          <span className="text-white">Loading Model...</span>
+        </div>
+      ) : null}
       <div ref={sketchRef}></div>
     </div>
   );
