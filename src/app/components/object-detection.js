@@ -21,7 +21,7 @@ const ObjectDetection = () => {
     p.setup = () => {
       p.createCanvas(640, 480);
       video = p.createCapture(p.VIDEO);
-      video.size(640, 480);
+      video.size("100%", "100%");
       video.hide();
 
       detector = ml5.objectDetector("cocossd", modelReady);
