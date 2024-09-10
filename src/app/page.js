@@ -3,19 +3,14 @@
 import Header from "./components/header";
 import ObjectDetection from "./components/object-detection";
 
-let canvas;
-let video;
-let detector;
-let detections = [];
-
 export default function Home() {
   return (
     <div>
       <Header />
       <div className="p-5 flex justify-center items-center ">
-        <div className="w-4/5 bg-white rounded-xl  p-6">
-          <h2 className="font-bold text-lg mb-2">System check</h2>
-          <p>
+        <div className="w-4/5 bg-white rounded-xl  p-10">
+          <h2 className="font-bold text-2xl mb-2">System check</h2>
+          <p className="text-md">
             We utilize your camera image to ensure fairness for all
             participants, and we also employ both your camera and microphone for
             a video questions where you will be prompted to record a response
@@ -27,7 +22,7 @@ export default function Home() {
             nose, and lips. You can initiate a 5-second recording of yourself by
             clicking the button below.
           </p>
-          <div className="m-2 rounded-md overflow-hidden  ">
+          <div className="m-2 mt-10 rounded-2xl overflow-hidden border-purple w-1/2">
             <ObjectDetection />
           </div>
         </div>

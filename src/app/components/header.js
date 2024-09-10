@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="bg-white w-full flex justify-between p-3 px-10">
+    <div className="bg-white w-full flex justify-between items-center p-4 px-10">
       <div className="flex items-center">
-        <Image src="/logo.png" alt="logo" width={50} height={50} />
+        <Image src="/logo.png" alt="logo" width={70} height={70} />
         <div className="ml-4">
           <p className="font-bold mb-0">Frontend Developer</p>
           <span className="text-muted text-sm">Skill assessment test</span>
