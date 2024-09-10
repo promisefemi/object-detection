@@ -1,7 +1,12 @@
 "use client";
+import dynamic from "next/dynamic";
 
 import Header from "./components/header";
-import ObjectDetection from "./components/object-detection";
+
+const ObjectDetection = dynamic(() => import("./components/object-detection"), {
+  ssr: false,
+  loading: () => <p>Loading object detection...</p>,
+});
 
 export default function Home() {
   return (
